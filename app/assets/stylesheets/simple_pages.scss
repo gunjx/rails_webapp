@@ -1,3 +1,146 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  box-sizing: border-box;
+  /* border: solid #D64078 2px; */
+}
+
+body {
+  padding-top: 60px;
+  position: relative;
+}
+
+/*************************/
+/****** Navigation *******/
+/*************************/
+
+.navbar .container-fluid {
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.navbar a {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: color 500ms;
+  -webkit-transition: color 500ms;
+}
+
+/*************************/
+/********* Main **********/
+/*************************/
+
+/*** General stylings ****/
+
+p,
+h1,
+h2,
+footer {
+  margin: 10px auto;
+  padding: 10px;
+}
+
+/********* Footer ********/
+
+.footer {
+  padding: 0;
+  margin: 0;
+}
+
+.footer .container-fluid {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 10px;
+  margin: 0 auto;
+}
+
+.footer__element {
+  padding: 0 5px;
+}
+
+/*************************/
+/****** Typography *******/
+/*************************/
+
+body,
+p {
+  font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+h1,
+h2,
+.navbar a {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+/*************************/
+/******** Colors *********/
+/*************************/
+
+body {
+  background-color: #FFFFFF;
+  color: #3D6485;
+}
+
+/*** Dark blue navigation background color ***/
+.navbar,
+.footer {
+  background-color: #042037;
+  color: #FFFFFF;
+}
+
+/*** White links ***/
+.navbar .navbar-header a,
+.navbar-collapse .nav li a {
+  color: #FFFFFF;
+}
+
+/*** Remove border below link list ***/
+.nav-tabs {
+  border-bottom: 0px solid #042037;
+}
+
+/*** Inverse link color and background when hovered/selected ***/
+.navbar .navbar-right .active a:hover,
+.navbar .navbar-right li a:hover {
+  color: #042037;
+  background-color: #718DA5;
+}
+
+/*** Normal colors plus small border when selected ***/
+.navbar .navbar-right .active a,
+.navbar .navbar-right .active a:focus,
+.navbar .navbar-right li a:focus {
+  /* color: #FFFFFF; */
+  background-color: #042037;
+}
+
+/*** Light when hovered/selected ***/
+.navbar .navbar-toggle:hover,
+.navbar .navbar-toggle:focus {
+  background-color: #718DA5;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+/*** White border around burger menu and hovered/selected links ***/
+.navbar .navbar-toggle,
+.nav-tabs li a:hover {
+  border-color: #FFFFFF;
+}
+
+/*** Border around hovered/selected links, round edges ***/
+.nav-tabs li.active a,
+.nav-tabs li.active a:focus,
+.nav-tabs li.active a:hover,
+.nav-tabs li a:focus,
+.nav-tabs li a:hover {
+  border: 1px solid #FFFFFF;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  /* border-radius: 4px 4px 0 0; */
+  border-radius: 0;
+}

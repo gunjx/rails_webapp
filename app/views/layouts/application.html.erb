@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsWebapp</title>
+    <title>HipsterFoods</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </head>
 
-  <body>
+  <body data-target=".navbar" id="topofpage">
 
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#topofpage">Home</a>
+        </div> <!-- /navbar-header -->
+
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right nav-tabs" role="tablist">
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div> <!-- /navbar-collapse-->
+      </div> <!-- /nav -->
     </nav>
 
     <%= yield %>
 
-    <footer>
-      &copy; 2018 Andreas Spannagel
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="footer__element">&copy; Andreas Spannagel 2017</div>
+      </div><!-- /container -->
     </footer>
-    
+
   </body>
 </html>
