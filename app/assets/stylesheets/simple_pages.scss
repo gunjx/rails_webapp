@@ -10,6 +10,14 @@
 body {
   padding-top: 60px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  margin-top: -10px;
+  flex: 1;
 }
 
 /*************************/
@@ -43,6 +51,14 @@ h2,
   padding: 10px;
 }
 
+/*** Carousel Images ****/
+
+.carousel img {
+  margin: 0 auto;
+  object-fit: cover;
+  max-height: 555px;
+}
+
 /********* Footer ********/
 
 .footer {
@@ -68,12 +84,26 @@ h2,
 body,
 p {
   font-family: Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.2em;
 }
 
 h1,
 h2,
 .navbar a {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+.carousel-caption {
+  text-shadow: 3px 3px 0px #000;
+  font-size: 1.2em;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .carousel-caption {
+    text-shadow: 3px 3px 0px #000;
+    font-size: 2.2vw;
+  }
 }
 
 /*************************/
@@ -143,4 +173,9 @@ body {
   border-bottom-color: transparent;
   /* border-radius: 4px 4px 0 0; */
   border-radius: 0;
+}
+
+.carousel-caption {
+  /* width: 100%; */
+  background-color:rgba( 4, 32, 55, 0.7);
 }
