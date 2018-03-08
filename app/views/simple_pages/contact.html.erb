@@ -1,3 +1,27 @@
-<h1>Contact</h1>
+<h1>Contact us</h1>
 <p>Can't find your favorite products? I am always happy to receive your suggestions.</p>
 <p>Anything else? Feel free to contact me anytime.</p>
+
+<%= flash[:notice] %>
+
+<div class="container-fluid form">
+  <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true, class: "contact-form") do |form| %>
+  <!-- <div class="row"> -->
+    <div class="form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+    </div>
+    <div class="form-group">
+      <%= form.label :email %>
+      <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+    </div>
+    <div class="form-group">
+      <%= form.label :message %>
+      <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5, style: "resize:none" %>
+    </div>
+  <!-- </div> -->
+  <div class="action form-group">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+  <% end %>
+</div>
