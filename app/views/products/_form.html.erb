@@ -1,42 +1,43 @@
-<%= form_with(model: product, local: true) do |form| %>
-  <% if product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+<div class="container-fluid form">
+  <%= form_with(model: product, local: true, class: "contact-form", id: "contact-form") do |form| %>
+    <% if product.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
-      <ul>
-      <% product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+        <ul>
+        <% product.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+      <div class="field form-group">
+        <%= form.label :name %>
+        <%= form.text_field :name, id: :product_name, class: "form-control" %>
+      </div>
+
+      <div class="field form-group">
+        <%= form.label :description %>
+        <%= form.text_area :description, id: :product_description, size: "5x10", style: "resize:none", class: "form-control" %>
+      </div>
+
+      <div class="field form-group">
+        <%= form.label :image_url %>
+        <%= form.text_field :image_url, id: :product_image_url, class: "form-control" %>
+      </div>
+
+      <div class="field form-group">
+        <%= form.label :color %><br>
+        <%= form.text_field :color, class: "form-control" %>
+      </div>
+
+      <div class="field form-group">
+        <%= form.label :price %><br>
+        <%= form.text_field :price, class: "form-control" %>
+      </div>
+
+      <div class="action form-group">
+        <%= form.submit class: "btn btn-primary" %>
+      </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :product_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :product_description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url, id: :product_image_url %>
-  </div>
-
-  <div class="field">
-    <%= form.label :color %><br>
-    <%= form.text_field :color %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %><br>
-    <%= form.text_field :price %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

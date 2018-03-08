@@ -51,12 +51,16 @@ h2,
   padding: 10px;
 }
 
-/*** Carousel Images ****/
-
+/*** Center and limit heigth of carousel images ***/
 .carousel img {
   margin: 0 auto;
   object-fit: cover;
   max-height: 555px;
+}
+
+/*** Limit size form field ***/
+.form-group {
+  max-width: 500px;
 }
 
 /********* Footer ********/
@@ -87,9 +91,16 @@ p {
   font-size: 1.2em;
 }
 
+a {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 h1,
 h2,
-.navbar a {
+.navbar a,
+.form label,
+.btn-primary {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 
@@ -98,7 +109,7 @@ h2,
   font-size: 1.2em;
 }
 
-/* Small devices (tablets, 768px and up) */
+/*** Small devices (tablets, 768px and up) ***/
 @media (min-width: 768px) {
   .carousel-caption {
     text-shadow: 3px 3px 0px #000;
@@ -178,4 +189,21 @@ body {
 .carousel-caption {
   /* width: 100%; */
   background-color:rgba( 4, 32, 55, 0.7);
+}
+
+.btn-primary {
+  background-color: #FFFFFF;
+  border-color: #ccc;
+  color: #3D6485;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #718DA5;
+  border-color: #496C89;
+}
+
+.btn-primary:active {
+  background-color: #496C89;
+  border-color: #123552;
 }

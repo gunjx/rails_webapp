@@ -28,6 +28,18 @@
         </div> <!-- /navbar-header -->
 
         <div class="navbar-collapse collapse">
+          <div class="col-sm-3 col-md-3">
+            <%= form_with(url: products_path, method: 'get', local: true, class: "navbar-form", role: "search") do |form| %>
+              <div class="input-group">
+                <%= form.label :q, 'Search for:', class: "sr-only" %>
+                <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control" %>
+                <div class="input-group-btn">
+                  <%= form.submit 'Search', class: "btn btn-default" %>
+                  <!-- <i class="glyphicon glyphicon-search"></i> -->
+                </div>
+              </div>
+            <% end %>
+          </div>
           <ul class="nav navbar-nav navbar-right nav-tabs" role="tablist">
             <li><%= link_to "Products", products_path %></li>
             <li><%= link_to "Orders", orders_path %></li>
