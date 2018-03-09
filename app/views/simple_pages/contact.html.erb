@@ -5,7 +5,7 @@
 <%= flash[:notice] %>
 
 <div class="container-fluid form">
-  <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true, class: "contact-form") do |form| %>
+  <%= form_with url:"/simple_pages/thank_you", method: "post", local: true, class: "form-contact" do |form| %>
   <!-- <div class="row"> -->
     <div class="form-group">
       <%= form.label :name %>

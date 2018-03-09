@@ -28,7 +28,22 @@
         </div> <!-- /navbar-header -->
 
         <div class="navbar-collapse collapse">
-          <div class="col-sm-3 col-md-3">
+          <ul class="nav navbar-nav navbar-right nav-tabs">
+            <li class="link-logout">
+            <% if user_signed_in? %>
+              <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+            <% else %>
+              <%= link_to('Login', new_user_session_path) %>
+            <% end %>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right nav-tabs" role="tablist">
+            <li class="link-first"><%= link_to "Products", products_path %></li>
+            <li><%= link_to "Orders", orders_path %></li>
+            <li><%= link_to "About", simple_pages_about_path %></li>
+            <li class="link-last"><%= link_to "Contact", simple_pages_contact_path %></li>
+          </ul>
+          <div class="col-sm-3 col-md-3 navbar-right">
             <%= form_with(url: products_path, method: 'get', local: true, class: "navbar-form", role: "search") do |form| %>
               <div class="input-group">
                 <%= form.label :q, 'Search for:', class: "sr-only" %>
@@ -40,15 +55,13 @@
               </div>
             <% end %>
           </div>
-          <ul class="nav navbar-nav navbar-right nav-tabs" role="tablist">
-            <li><%= link_to "Products", products_path %></li>
-            <li><%= link_to "Orders", orders_path %></li>
-            <li><%= link_to "About", simple_pages_about_path %></li>
-            <li><%= link_to "Contact", simple_pages_contact_path %></li>
-          </ul>
         </div> <!-- /navbar-collapse-->
       </div> <!-- /nav -->
     </nav>
+
+    <%#= flash[:notice] %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
     <div class="content"><%= yield %></div>
 
