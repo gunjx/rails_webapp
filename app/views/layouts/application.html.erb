@@ -60,8 +60,12 @@
     </nav>
 
     <%#= flash[:notice] %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <p id="notice" class="alert alert-warning" role="alert"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-info" role="alert"><%= alert %></p>
+    <% end %>
 
     <div class="content"><%= yield %></div>
 

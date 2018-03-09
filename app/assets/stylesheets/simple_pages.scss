@@ -83,14 +83,11 @@ form h2 {
   padding: 0 0 10px;
 }
 
-label {
-  // margin-bottom: 0;
-}
-
 /*** Center notice and alert ***/
 .notice,
 .alert {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .carousel {
