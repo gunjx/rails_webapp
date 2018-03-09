@@ -1,22 +1,26 @@
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<div class="row">
+  <div class="col-sm-6 col-xs-12">
+    <div class="product-show-img">
+      <%= image_tag(@product.image_url, class: "img-responsive") %>
+    </div>
+  </div>
+  <div class="col-sm-4 col-xs-12">
+      <h3><%= @product.name %></h3>
+      <p><%= @product.description %></p>
+      <p>
+        <strong>Price: </strong><%= number_to_currency(@product.price, unit: '€', precision: 2) %>
+      </p>
+      <!-- higest rating product -->
+      <p> Highest Rating:
+        <% highest = @product.highest_rating_comment.rating %>
+        <% highest.times do %>
+        <span class="glyphicon glyphicon-star"></span>
+        <% end %>
+        <% (5-highest).times do %>
+        <span class="glyphicon glyphicon-star-empty"></span>
+        <% end %>
+      </p><br>
+      <%= link_to 'Edit', edit_product_path(@product) %>
+      <%= link_to 'Back', products_path %>
+  </div>
+</div>

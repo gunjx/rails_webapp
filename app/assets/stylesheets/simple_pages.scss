@@ -19,6 +19,9 @@ body {
   flex: 1;
 }
 
+/*** Make bootstrap columns in products view same heigth ***/
+/* TODO */
+
 /*************************/
 /****** Navigation *******/
 /*************************/
@@ -73,13 +76,20 @@ body {
 p,
 h1,
 h2,
+h3,
 .footer {
   margin: 10px 0;
   padding: 10px;
 }
 
+a {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 form h1,
-form h2 {
+form h2,
+.caption h1 {
   padding: 0 0 10px;
 }
 
@@ -95,7 +105,8 @@ form h2 {
 }
 
 /*** Center and limit heigth of carousel images ***/
-.carousel img {
+.carousel img,
+.product-show-img img {
   margin: 0 auto;
   object-fit: cover;
   max-height: 360px;
@@ -108,6 +119,10 @@ form h2 {
     object-fit: cover;
     max-height: 555px;
   }
+}
+
+.product-show-img {
+  padding-top: 20px;
 }
 
 /*** Limit size form field ***/
@@ -151,13 +166,9 @@ p {
   font-size: 1.2em;
 }
 
-a {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 h1,
 h2,
+h3,
 .navbar a,
 .form label,
 .btn-primary {
@@ -181,7 +192,8 @@ h2,
 /******** Colors *********/
 /*************************/
 
-body {
+body,
+.thumbnail .caption {
   background-color: #FFFFFF;
   color: #3D6485;
 }
