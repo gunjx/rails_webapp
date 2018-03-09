@@ -5,7 +5,7 @@
         Order # <%= order.id %>: <%= link_to order.product.name, order.product %>
       </h1>
       <p><%= order.product.description %></p>
-      <p><strong><%= order.product.price %> EUR</strong></p>
+      <p><strong><%= order.total %> EUR</strong></p>
     </div><!-- /col -->
   <% end %>
 </div>

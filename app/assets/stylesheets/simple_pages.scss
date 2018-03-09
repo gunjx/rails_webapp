@@ -8,7 +8,7 @@
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 50px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,6 @@ body {
 }
 
 .content {
-  margin-top: -10px;
   flex: 1;
 }
 
@@ -102,7 +101,16 @@ label {
 .carousel img {
   margin: 0 auto;
   object-fit: cover;
-  max-height: 555px;
+  max-height: 360px;
+}
+
+/*** Small devices (tablets, 768px and up) ***/
+@media (min-width: 768px) {
+  .carousel img {
+    margin: 0 auto;
+    object-fit: cover;
+    max-height: 555px;
+  }
 }
 
 /*** Limit size form field ***/
