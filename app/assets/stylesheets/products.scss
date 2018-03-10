@@ -1,22 +1,3 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-/* Styling product images */
-
-.col {
-  padding: 0;
-}
-
-.img-product {
-  padding: 10px;
-  max-height: 400px;
-  // object-fit: cover;
-  // margin: 0 auto;
-}
-
-@media (min-width: 992px) {
-  .img-product {
-    max-height: 265px;
-  }
-}

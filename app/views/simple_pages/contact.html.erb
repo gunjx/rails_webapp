@@ -7,15 +7,15 @@
 <div class="container-fluid form">
   <%= form_with url:"/simple_pages/thank_you", method: "post", local: true, class: "form-contact" do |form| %>
   <!-- <div class="row"> -->
-    <div class="form-group">
+    <div class="field form-group">
       <%= form.label :name %>
       <%= form.text_field :name, id: "name", class: "form-control", placeholder: "Enter Name", required: true %>
     </div>
-    <div class="form-group">
+    <div class="field form-group">
       <%= form.label :email %>
       <%= form.email_field :email, id: "email", class: "form-control", placeholder: "Enter Email", required: true %>
     </div>
-    <div class="form-group">
+    <div class="field form-group">
       <%= form.label :message %>
       <%= form.text_area :message, id: "message", class: "form-control", placeholder: "Enter Message", rows: 5, style: "resize:none", required: true %>
     </div>

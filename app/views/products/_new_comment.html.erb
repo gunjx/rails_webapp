@@ -1,18 +1,15 @@
-<div class="container-fluid">
+<div class="col-sm-10 col-xs-12 form">
   <% if signed_in? %>
-    <h4>Add a review:</h4>
-    <%= form_for([@product, @product.comments.build]) do |f| %>
-      <p>
-        <%= f.label :body, "Comments" %><br>
-        <%= f.text_area :body %>
-      </p>
-      <p>
-        <%= f.label :rating %><br>
-        <%= f.text_field :rating, class: "rating" %>
-      </p>
-      <p>
-        <%= f.submit "Submit" %>
-      </p>
+    <%= form_with model:[@product, @product.comments.build], class: "form-comment" do |form| %>
+      <h4>Add a review:</h4>
+      <div class="field form-group">
+        <%= form.label :body, "Comment" %>
+        <%= form.text_area :body, id: :comment_body, size: "5x10", style: "resize:none", class: "form-control" %>
+      </div>
+      <div class="field form-group rating"></div>
+      <div class="action form-group">
+        <%= form.submit "Submit", class: "btn btn-primary" %>
+      </div>
     <% end %>
   <% end %>
 </div>

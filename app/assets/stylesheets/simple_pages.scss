@@ -68,10 +68,8 @@ body {
 // }
 
 /*************************/
-/********* Main **********/
+/**** General styling ****/
 /*************************/
-
-/*** General stylings ****/
 
 p,
 h1,
@@ -88,12 +86,6 @@ a {
   padding-right: 10px;
 }
 
-form h1,
-form h2,
-.caption h1 {
-  padding: 0 0 10px;
-}
-
 /*** Center notice and alert ***/
 .notice,
 .alert {
@@ -101,6 +93,22 @@ form h2,
   margin-right: auto;
 }
 
+/* Styling product images */
+
+.img-product {
+  padding: 10px;
+  max-height: 400px;
+  // object-fit: cover;
+  // margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .img-product {
+    max-height: 265px;
+  }
+}
+
+/*** Move carousel over alerts ***/
 .carousel {
   margin-top: -50px;
 }
@@ -126,11 +134,36 @@ form h2,
   padding-top: 20px;
 }
 
-/*** Limit size form field ***/
+.product-reviews p {
+  padding: 0;
+}
+
+.rated {
+  margin-bottom: 10px;
+}
+
+/*************************/
+/********* Forms *********/
+/*************************/
+
+form h1,
+form h2,
+form h3,
+form h4,
+.caption h1 {
+  padding: 10px 0;
+}
+
+/*** Limit size of form fields ***/
 .form-contact,
-.form-registration {
+.form-registration,
+.form-product {
   max-width: 500px;
 }
+
+// .form-comment {
+//   max-width: 700px;
+// }
 
 /*** Center form ***/
 .form-signin {
@@ -139,7 +172,14 @@ form h2,
   max-width: 330px;
 }
 
+/*** Align remember_me checkbox ***/
+.checkbox input[type=checkbox] {
+  margin: 2px 0 0;
+}
+
+/*************************/
 /********* Footer ********/
+/*************************/
 
 .footer {
   padding: 0;

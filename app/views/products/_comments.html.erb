@@ -1,10 +1,8 @@
-<div class="container-fluid product-reviews">
+<div class="col-sm-10 col-xs-12 product-reviews">
     <% @comments.each do |comment| %>
-        <div class="row">
-            <hr>
-            <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small></p>
-            <p><%= "Rating: #{comment.rating}/5" %></p>
-            <p><%= comment.body %></p>
-        </div>
+      <hr>
+      <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small></p>
+      <p><div class="rated"></div></p>
+      <p><%= comment.body %></p>
     <% end %>
 </div>
