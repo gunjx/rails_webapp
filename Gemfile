@@ -34,6 +34,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 # Use CanCanCan to manage user abilities
 gem 'cancancan', '~> 1.10'
+# Use will_paginate to paginate db queried lists
+gem 'will_paginate', '~> 3.1.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
