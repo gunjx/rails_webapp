@@ -52,7 +52,7 @@
                 <%= form.label :q, 'Search for:', class: "sr-only" %>
                 <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control" %>
                 <div class="input-group-btn">
-                  <%= form.submit ('Search').html_safe, class: "btn btn-default" %>
+                  <%= form.submit 'Search', class: "btn btn-default" %>
                   <!-- <i class="glyphicon glyphicon-search"></i> -->
                 </div>
               </div>

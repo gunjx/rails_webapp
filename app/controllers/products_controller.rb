@@ -10,8 +10,9 @@ class ProductsController < ApplicationController
       @products = Product.search(search_term)
     else
       # Full products view
-      @products = Product.all.paginate(page: params[:page], per_page: 5)
+      @products = Product.all
     end
+    @products = @products.paginate(page: params[:page], per_page: 5)
   end
 
   # GET /products/1
