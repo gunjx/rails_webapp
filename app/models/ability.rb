@@ -8,6 +8,7 @@ class Ability
     can :manage, Order, user_id: user.id
     if user.admin?
       can :manage, Comment
+      can :manage, User
     end
 
     # Example with admin attribute
