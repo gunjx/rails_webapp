@@ -36,6 +36,8 @@ gem 'devise'
 gem 'cancancan', '~> 1.10'
 # Use will_paginate to paginate db queried lists
 gem 'will_paginate', '~> 3.1.0'
+# Use stripe payment processor
+gem 'stripe'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
