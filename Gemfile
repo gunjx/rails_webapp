@@ -38,6 +38,8 @@ gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.1.0'
 # Use stripe payment processor
 gem 'stripe'
+# Use dalli for accessing memcached servers
+gem 'dalli'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
