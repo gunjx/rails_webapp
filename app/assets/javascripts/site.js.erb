@@ -1,4 +1,5 @@
 $(document).on('turbolinks:load', function() {
+  // RatyRate plugin for star rating
   $('.rating').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
@@ -15,4 +16,7 @@ $(document).on('turbolinks:load', function() {
       return $(this).attr('data-score');
     }
   });
+
+  // ElevateZoom plugin for image zoom
+  $('.img-zoom').elevateZoom();
 });
