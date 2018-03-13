@@ -53,6 +53,8 @@ group :development, :test do
   gem 'rails-controller-testing'
   #  Use factorybot for generating test data
   gem 'factory_bot_rails', '~> 4.0'
+  # Use brakeman to check for security vulnerabilities
+  gem 'brakeman'
 end
 
 group :development do
