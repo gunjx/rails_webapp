@@ -12,7 +12,7 @@
           <strong>Price: </strong><%= number_to_currency(@product.price, unit: '€', precision: 2) %>
         </p>
         <!-- higest rating product -->
-        <p class="av-rating"> Average Rating: <span class="rated" data-score="<%= @product.average_rating %>"></span>
+        <p class="av-rating"> Average Rating: <span class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></span>
         <%= form_with(url: '/payments/create') do |form| %>
           <%= hidden_field_tag(:product_id, @product.id) %>
           <%= render partial: "shared/stripe_checkout_button" %>
