@@ -8,11 +8,14 @@ class ProductsController < ApplicationController
       # Return filtered list
       search_term = params[:q]
       @products = Product.search(search_term)
+      logger.debug "User entering through search form, products: #{@products.pluck(:name)}"
     else
       # Full products view
       @products = Product.all
+      logger.debug "User entering through product link, products: #{@products.pluck(:name)}"
     end
     @products = @products.paginate(page: params[:page], per_page: 5)
+    logger.debug "After pagination, products: #{@products.pluck(:name)}"
   end
 
   # GET /products/1

@@ -3,6 +3,7 @@ class PaymentsController < ApplicationController
   def create
     token = params[:stripeToken]
     @product = Product.find(params[:product_id])
+    byebug
     if user_signed_in?
       @user = current_user
     else
