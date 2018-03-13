@@ -1,5 +1,5 @@
 <div class="container">
-  <%= form_with model: resource, as: resource_name, url: session_path(resource_name), class: "form-signin" do |form| %>
+  <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true, class: "form-signin" do |form| %>
     <h2>Please sign in</h2>
     <div class="field form-group">
       <%= form.label :email, class: "sr-only" %><br />
