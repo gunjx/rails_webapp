@@ -20,7 +20,11 @@
             <%= hidden_field_tag(:product_id, @product.id) %>
             <%= render partial: "shared/stripe_checkout_button" %>
           <% end %>
-        </p><br>
+        </p>
+        <p>
+          This product has been viewed <span class="label label-warning"> <%= @product.views %></span> times.
+
+        </p>
 
         <%= link_to 'Edit', edit_product_path(@product) %>
         <%= link_to 'Back', products_path %>
