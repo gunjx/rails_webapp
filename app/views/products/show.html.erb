@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="row">
+  <div class="row" data-product-id="<%= @product.id %>">
     <div class="col-sm-6 col-xs-12">
       <div class="product-show-img">
         <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: @product.image_url) %>
