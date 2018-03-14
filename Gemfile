@@ -40,6 +40,8 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'stripe'
 # Use dalli for accessing memcached servers
 gem 'dalli'
+# Use redis for performance key-value store
+gem 'redis-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
