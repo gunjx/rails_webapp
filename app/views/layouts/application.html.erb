@@ -62,12 +62,16 @@
       </div> <!-- /nav -->
     </nav>
 
-    <%#= flash[:notice] %>
-    <% if notice %>
-      <p id="notice" class="alert alert-info" role="alert"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-warning" role="alert"><%= alert %></p>
+    <% flash.each do |key, value| %>
+      <% if alert %>
+        <p class="alert alert-warning" role="alert"><%= alert %></p>
+      <% elsif notice %>
+        <p class="alert alert-info" role="alert"><%= notice %></p>
+      <% elsif error %>
+        <p class="alert alert-danger" role="alert"><%= error %></p>
+      <% else %>
+        <p class="alert alert-<%= key %>" role="alert"><%= value %></p>
+      <% end %>
     <% end %>
 
     <div class="content"><%= yield %></div>
