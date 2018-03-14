@@ -55,4 +55,7 @@ Rails.application.configure do
   # Enable dynamic links inside emails to generate the right URLs inside dev environment
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
+  # Disable rails default generation of coffeescript files
+  config.app_generators.javascript_engine = :javascript
+
 end
