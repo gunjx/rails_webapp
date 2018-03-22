@@ -7,7 +7,7 @@ class PaymentsController < ApplicationController
       @user = current_user
     else
       redirect_to new_user_registration_path
-      flash[:warning] = t("devise.failure.unauthenticated")
+      flash[:alert] = t('devise.failure.unauthenticated')
     end
 
     if @user
@@ -26,13 +26,13 @@ class PaymentsController < ApplicationController
             user_id: @user.id,
             total: @product.price
           )
-          flash[:success] = 'Your payment was processed successfully'
+          flash[:notice] = 'Your payment was processed successfully'
         end
 
       rescue Stripe::CardError => e
         body = e.json_body
         err = body[:error]
-        flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
+        flash[:alert] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
       end
 
       redirect_to product_path(@product)
